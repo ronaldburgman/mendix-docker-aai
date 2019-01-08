@@ -10,11 +10,3 @@
 +
  # Copy python scripts which execute the buildpack (exporting the VCAP variables)
  COPY scripts/compilation /buildpack
- 
-@@ -44,4 +48,4 @@
- COPY scripts/ /build
- WORKDIR /build
- RUN chmod u+x startup
--ENTRYPOINT ["/build/startup","/buildpack/start.py"]
-\ No newline at end of file
-+ENTRYPOINT ["/build/startup","/buildpack/start.py"]
