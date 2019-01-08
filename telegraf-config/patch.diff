@@ -1,19 +1,12 @@
 --- Dockerfile.original	2019-01-04 12:58:12.190570800 +0100
-+++ Dockerfile	2019-01-04 13:01:47.785911600 +0100
-@@ -10,12 +10,17 @@
- # Build-time variables
- ARG BUILD_PATH=project
- ARG DD_API_KEY
-+#Enable Azure Application Insights. If set, telegraf is installed
-+ARG APPMETRICS_AAI
- 
- # Checkout CF Build-pack here
- RUN mkdir -p buildpack/.local && \
++++ Dockerfile	2019-01-08 16:11:59.826755900 +0100
+@@ -16,6 +16,10 @@
     (wget -qO- https://github.com/mendix/cf-mendix-buildpack/archive/master.tar.gz \
     | tar xvz -C buildpack --strip-components 1)
  
 +#Import telegraf configuration for AAI
 +COPY buildpack/telegraf.py /buildpack/lib/
++ENV APP_METRICS=true
 +
  # Copy python scripts which execute the buildpack (exporting the VCAP variables)
  COPY scripts/compilation /buildpack
