@@ -1,12 +1,12 @@
 --- Dockerfile.original	2019-01-04 12:58:12.190570800 +0100
-+++ Dockerfile	2019-01-08 16:11:59.826755900 +0100
++++ Dockerfile	2019-01-08 16:22:08.554019000 +0100
 @@ -16,6 +16,10 @@
     (wget -qO- https://github.com/mendix/cf-mendix-buildpack/archive/master.tar.gz \
     | tar xvz -C buildpack --strip-components 1)
  
 +#Import telegraf configuration for AAI
 +COPY buildpack/telegraf.py /buildpack/lib/
-+ENV APP_METRICS=true
++ENV APPMETRICS_AAI=true
 +
  # Copy python scripts which execute the buildpack (exporting the VCAP variables)
  COPY scripts/compilation /buildpack
