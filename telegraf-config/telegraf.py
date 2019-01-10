@@ -184,7 +184,7 @@ def _write_cpu_input_config():
     _write_config("[[inputs.cpu]]", cpu_input)
 
 def update_config(m2ee, app_name):
-    if not is_enabled() or not _is_installed() or os.path.isfile('.local/telegraf/etc/telegraf/telegraf.conf'):
+    if not is_enabled() or not _is_installed():
         return
 
     # Telegraf config, taking over defaults from telegraf.conf from the distro
