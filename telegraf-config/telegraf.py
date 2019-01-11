@@ -146,7 +146,7 @@ def _write_aai_output_config():
 
 
 def _write_mendix_admin_http_input_config(action, metric_prefix, query, fields):
-    mxpassword = os.getenv("ADMIN_PASSWORD")
+    mxpassword = os.getenv("M2EE_PASSWORD")
     mxpassword64 = base64.b64encode(mxpassword.encode()).decode("ascii")
     http_input = {
         "urls": ["http://localhost:82/_mxadmin"],
@@ -161,7 +161,7 @@ def _write_mendix_admin_http_input_config(action, metric_prefix, query, fields):
     _write_config("[[inputs.http]]", http_input)
 
 def _write_mendix_admin_http_named_input_config(action, metric_prefix, key_name, query, fields):
-    mxpassword = os.getenv("ADMIN_PASSWORD")
+    mxpassword = os.getenv("M2EE_PASSWORD")
     mxpassword64 = base64.b64encode(mxpassword.encode()).decode("ascii")
     http_input = {
         "urls": ["http://localhost:82/_mxadmin"],
