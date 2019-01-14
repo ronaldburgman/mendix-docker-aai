@@ -1,0 +1,2837 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+      "ai_name": {
+          "type": "string"
+      },
+      "ai_resourceGroup": {
+          "type": "string"
+      },
+      "storage_name": {
+        "type": "string"
+      },
+      "storage_resourceGroup": {
+        "type": "string"
+      },
+      "dashboardName": {
+          "type": "string"
+      }
+  },
+  "variables": {},
+  "resources": [
+    {
+      "properties": {
+        "lenses": {
+          "0": {
+            "order": 0,
+            "parts": {
+              "0": {
+                "position": {
+                  "x": 0,
+                  "y": 0,
+                  "colSpan": 15,
+                  "rowSpan": 4
+                },
+                "metadata": {
+                  "inputs": [
+                    {
+                      "name": "options",
+                      "value": {
+                        "charts": [
+                          {
+                            "metrics": [
+                              {
+                                "name": "customMetrics/mendix_runtime_requests_",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              },
+                              {
+                                "name": "customMetrics/mendix_runtime_requests_ws/",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              },
+                              {
+                                "name": "customMetrics/mendix_runtime_requests_file",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              },
+                              {
+                                "name": "customMetrics/mendix_runtime_requests_ws-doc/",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              },
+                              {
+                                "name": "customMetrics/mendix_runtime_requests_api-doc/",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              },
+                              {
+                                "name": "customMetrics/mendix_runtime_requests_rest-doc/",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              },
+                              {
+                                "name": "customMetrics/mendix_runtime_requests_odata-doc/",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              },
+                              {
+                                "name": "customMetrics/mendix_runtime_requests_rest/",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              },
+                              {
+                                "name": "customMetrics/mendix_runtime_requests_xas/",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              },
+                              {
+                                "name": "customMetrics/mendix_runtime_requests_p/",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              }
+                            ],
+                            "title": "Requests",
+                            "visualization": {
+                              "chartType": 2,
+                              "legend": {
+                                "isVisible": true,
+                                "position": 2,
+                                "hideSubtitle": false
+                              },
+                              "axis": {
+                                "x": {
+                                  "isVisible": true,
+                                  "axisType": 2,
+                                  "min": 1545301749458,
+                                  "max": 1545388149458
+                                },
+                                "y": {
+                                  "isVisible": true,
+                                  "axisType": 1
+                                }
+                              },
+                              "timeBrushEnable": false
+                            },
+                            "itemDataModel": {
+                              "id": "CD67971F-F85E-48A6-B47B-3D812F43658C",
+                              "chartHeight": 1,
+                              "metrics": [
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/mendix_runtime_requests_",
+                                      "displayName": "mendix_runtime_requests_"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#47BDF5"
+                                },
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/mendix_runtime_requests_ws/",
+                                      "displayName": "mendix_runtime_requests_ws/"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#7E58FF"
+                                },
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/mendix_runtime_requests_file",
+                                      "displayName": "mendix_runtime_requests_file"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#44F1C8"
+                                },
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/mendix_runtime_requests_ws-doc/",
+                                      "displayName": "mendix_runtime_requests_ws-doc/"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#EB9371"
+                                },
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/mendix_runtime_requests_api-doc/",
+                                      "displayName": "mendix_runtime_requests_api-doc/"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#0672F1"
+                                },
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/mendix_runtime_requests_rest-doc/",
+                                      "displayName": "mendix_runtime_requests_rest-doc/"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#A3A6BA"
+                                },
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/mendix_runtime_requests_odata-doc/",
+                                      "displayName": "mendix_runtime_requests_odata-doc/"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#B456DB"
+                                },
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/mendix_runtime_requests_rest/",
+                                      "displayName": "mendix_runtime_requests_rest/"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#63899D"
+                                },
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/mendix_runtime_requests_xas/",
+                                      "displayName": "mendix_runtime_requests_xas/"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#81A0FC"
+                                },
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/mendix_runtime_requests_p/",
+                                      "displayName": "mendix_runtime_requests_p/"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#F1C721"
+                                }
+                              ],
+                              "priorPeriod": false,
+                              "horizontalBars": true,
+                              "showOther": false,
+                              "aggregation": 1,
+                              "palette": "multiColor",
+                              "jsonDefinitionId": "CE4323AB-576B-4798-A0E5-6D03C3722FB3",
+                              "version": {
+                                "major": 1,
+                                "minor": 0,
+                                "build": 0
+                              },
+                              "filters": {
+                                "filterType": 0,
+                                "id": "14602D21-877F-4C90-ADF8-6BB5627C9225",
+                                "OperandFilters": [],
+                                "LogicalOperator": 0
+                              },
+                              "yAxisOptions": {
+                                "options": 1
+                              },
+                              "title": "Requests",
+                              "titleKind": "Auto",
+                              "visualization": {
+                                "chartType": 2,
+                                "legend": {
+                                  "isVisible": true,
+                                  "position": 2,
+                                  "hideSubtitle": false
+                                },
+                                "axis": {
+                                  "x": {
+                                    "isVisible": true,
+                                    "axisType": 2,
+                                    "min": 1545301749458,
+                                    "max": 1545388149458
+                                  },
+                                  "y": {
+                                    "isVisible": true,
+                                    "axisType": 1
+                                  }
+                                },
+                                "timeBrushEnable": false
+                              }
+                            }
+                          }
+                        ],
+                        "v2charts": true,
+                        "version": 1
+                      }
+                    },
+                    {
+                      "name": "sharedTimeRange",
+                      "binding": "timeRange",
+                      "isOptional": true
+                    }
+                  ],
+                  "type": "Extension/HubsExtension/PartType/MonitorChartPart",
+                  "settings": {}
+                }
+              },
+              "1": {
+                "position": {
+                  "x": 0,
+                  "y": 4,
+                  "colSpan": 15,
+                  "rowSpan": 4
+                },
+                "metadata": {
+                  "inputs": [
+                    {
+                      "name": "options",
+                      "value": {
+                        "charts": [
+                          {
+                            "metrics": [
+                              {
+                                "name": "customMetrics/mendix_runtime_sessions_named_users",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              },
+                              {
+                                "name": "customMetrics/mendix_runtime_sessions_named_user_sessions",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              },
+                              {
+                                "name": "customMetrics/mendix_runtime_sessions_anonymous_sessions",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              }
+                            ],
+                            "title": "User sessions",
+                            "visualization": {
+                              "chartType": 2,
+                              "legend": {
+                                "isVisible": true,
+                                "position": 2,
+                                "hideSubtitle": false
+                              },
+                              "axis": {
+                                "x": {
+                                  "isVisible": true,
+                                  "axisType": 2,
+                                  "min": 1545234375711,
+                                  "max": 1545320775711
+                                },
+                                "y": {
+                                  "isVisible": true,
+                                  "axisType": 1
+                                }
+                              },
+                              "timeBrushEnable": false
+                            },
+                            "itemDataModel": {
+                              "id": "D7614A7E-BE30-4E18-B128-9FA674A60A05",
+                              "chartHeight": 1,
+                              "metrics": [
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/mendix_runtime_sessions_named_users",
+                                      "displayName": "mendix_runtime_sessions_named_users"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#47BDF5"
+                                },
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/mendix_runtime_sessions_named_user_sessions",
+                                      "displayName": "mendix_runtime_sessions_named_user_sessions"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#7E58FF"
+                                },
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/mendix_runtime_sessions_anonymous_sessions",
+                                      "displayName": "mendix_runtime_sessions_anonymous_sessions"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#44F1C8"
+                                }
+                              ],
+                              "priorPeriod": false,
+                              "horizontalBars": true,
+                              "showOther": false,
+                              "aggregation": 1,
+                              "palette": "multiColor",
+                              "jsonDefinitionId": "1C36A376-F923-44EC-A285-AF186C380C08",
+                              "version": {
+                                "major": 1,
+                                "minor": 0,
+                                "build": 0
+                              },
+                              "filters": {
+                                "filterType": 0,
+                                "id": "68BF88C8-BC30-4083-9138-2C1CA4800826",
+                                "OperandFilters": [],
+                                "LogicalOperator": 0
+                              },
+                              "yAxisOptions": {
+                                "options": 1
+                              },
+                              "title": "User sessions",
+                              "titleKind": "Custom",
+                              "visualization": {
+                                "chartType": 2,
+                                "legend": {
+                                  "isVisible": true,
+                                  "position": 2,
+                                  "hideSubtitle": false
+                                },
+                                "axis": {
+                                  "x": {
+                                    "isVisible": true,
+                                    "axisType": 2,
+                                    "min": 1545234375711,
+                                    "max": 1545320775711
+                                  },
+                                  "y": {
+                                    "isVisible": true,
+                                    "axisType": 1
+                                  }
+                                },
+                                "timeBrushEnable": false
+                              }
+                            }
+                          }
+                        ],
+                        "v2charts": true,
+                        "version": 1
+                      }
+                    },
+                    {
+                      "name": "sharedTimeRange",
+                      "binding": "timeRange",
+                      "isOptional": true
+                    }
+                  ],
+                  "type": "Extension/HubsExtension/PartType/MonitorChartPart",
+                  "settings": {
+                    "content": {
+                      "options": {
+                        "charts": [
+                          {
+                            "metrics": [
+                              {
+                                "name": "customMetrics/mendix_runtime_sessions_named_users",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              },
+                              {
+                                "name": "customMetrics/mendix_runtime_sessions_named_user_sessions",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              },
+                              {
+                                "name": "customMetrics/mendix_runtime_sessions_anonymous_sessions",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              }
+                            ],
+                            "title": "User sessions",
+                            "visualization": {
+                              "chartType": 2,
+                              "legend": {
+                                "isVisible": true,
+                                "position": 2,
+                                "hideSubtitle": false
+                              },
+                              "axis": {
+                                "x": {
+                                  "isVisible": true,
+                                  "axisType": 2,
+                                  "min": 1545234375711,
+                                  "max": 1545320775711
+                                },
+                                "y": {
+                                  "isVisible": true,
+                                  "axisType": 1
+                                }
+                              },
+                              "timeBrushEnable": false
+                            },
+                            "itemDataModel": {
+                              "id": "D7614A7E-BE30-4E18-B128-9FA674A60A05",
+                              "chartHeight": 1,
+                              "metrics": [
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/mendix_runtime_sessions_named_users",
+                                      "displayName": "mendix_runtime_sessions_named_users"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#47BDF5"
+                                },
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/mendix_runtime_sessions_named_user_sessions",
+                                      "displayName": "mendix_runtime_sessions_named_user_sessions"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#7E58FF"
+                                },
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/mendix_runtime_sessions_anonymous_sessions",
+                                      "displayName": "mendix_runtime_sessions_anonymous_sessions"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#44F1C8"
+                                }
+                              ],
+                              "priorPeriod": false,
+                              "horizontalBars": true,
+                              "showOther": false,
+                              "aggregation": 1,
+                              "palette": "multiColor",
+                              "jsonDefinitionId": "1C36A376-F923-44EC-A285-AF186C380C08",
+                              "version": {
+                                "major": 1,
+                                "minor": 0,
+                                "build": 0
+                              },
+                              "filters": {
+                                "filterType": 0,
+                                "id": "68BF88C8-BC30-4083-9138-2C1CA4800826",
+                                "OperandFilters": [],
+                                "LogicalOperator": 0
+                              },
+                              "yAxisOptions": {
+                                "options": 1
+                              },
+                              "title": "User sessions",
+                              "titleKind": "Custom",
+                              "visualization": {
+                                "chartType": 2,
+                                "legend": {
+                                  "isVisible": true,
+                                  "position": 2,
+                                  "hideSubtitle": false
+                                },
+                                "axis": {
+                                  "x": {
+                                    "isVisible": true,
+                                    "axisType": 2,
+                                    "min": 1545234375711,
+                                    "max": 1545320775711
+                                  },
+                                  "y": {
+                                    "isVisible": true,
+                                    "axisType": 1
+                                  }
+                                },
+                                "timeBrushEnable": false
+                              }
+                            },
+                            "disablePinning": true
+                          }
+                        ],
+                        "v2charts": true,
+                        "version": 1
+                      },
+                      "sharedTimeRange": {
+                        "relative": {
+                          "duration": 24,
+                          "timeUnit": 1
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "2": {
+                "position": {
+                  "x": 0,
+                  "y": 8,
+                  "colSpan": 15,
+                  "rowSpan": 4
+                },
+                "metadata": {
+                  "inputs": [
+                    {
+                      "name": "options",
+                      "value": {
+                        "charts": [
+                          {
+                            "metrics": [
+                              {
+                                "name": "customMetrics/mendix_runtime_memory_max_heap",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              },
+                              {
+                                "name": "customMetrics/mendix_runtime_memory_committed_heap",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              },
+                              {
+                                "name": "customMetrics/mendix_runtime_memory_used_heap",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              }
+                            ],
+                            "title": "Heap Memory",
+                            "visualization": {
+                              "chartType": 2,
+                              "legend": {
+                                "isVisible": true,
+                                "position": 2,
+                                "hideSubtitle": false
+                              },
+                              "axis": {
+                                "x": {
+                                  "isVisible": true,
+                                  "axisType": 2,
+                                  "min": 1545234492070,
+                                  "max": 1545320892070
+                                },
+                                "y": {
+                                  "isVisible": true,
+                                  "axisType": 1
+                                }
+                              },
+                              "timeBrushEnable": false
+                            },
+                            "itemDataModel": {
+                              "id": "55CB2FC4-12BA-4DEC-AF64-36C5B8C02A0F",
+                              "chartHeight": 1,
+                              "metrics": [
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/mendix_runtime_memory_max_heap",
+                                      "displayName": "mendix_runtime_memory_max_heap"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#47BDF5"
+                                },
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/mendix_runtime_memory_committed_heap",
+                                      "displayName": "mendix_runtime_memory_committed_heap"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#7E58FF"
+                                },
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/mendix_runtime_memory_used_heap",
+                                      "displayName": "mendix_runtime_memory_used_heap"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#44F1C8"
+                                }
+                              ],
+                              "priorPeriod": false,
+                              "horizontalBars": true,
+                              "showOther": false,
+                              "aggregation": 1,
+                              "palette": "multiColor",
+                              "jsonDefinitionId": "2A525883-AAD2-4E2E-B023-646A449460F2",
+                              "version": {
+                                "major": 1,
+                                "minor": 0,
+                                "build": 0
+                              },
+                              "filters": {
+                                "filterType": 0,
+                                "id": "69F3C8F5-A5E8-4C20-AC6B-A06BEE1F5A96",
+                                "OperandFilters": [],
+                                "LogicalOperator": 0
+                              },
+                              "yAxisOptions": {
+                                "options": 1
+                              },
+                              "title": "Heap Memory",
+                              "titleKind": "Custom",
+                              "visualization": {
+                                "chartType": 2,
+                                "legend": {
+                                  "isVisible": true,
+                                  "position": 2,
+                                  "hideSubtitle": false
+                                },
+                                "axis": {
+                                  "x": {
+                                    "isVisible": true,
+                                    "axisType": 2,
+                                    "min": 1545234492070,
+                                    "max": 1545320892070
+                                  },
+                                  "y": {
+                                    "isVisible": true,
+                                    "axisType": 1
+                                  }
+                                },
+                                "timeBrushEnable": false
+                              }
+                            }
+                          }
+                        ],
+                        "v2charts": true,
+                        "version": 1
+                      }
+                    },
+                    {
+                      "name": "sharedTimeRange",
+                      "binding": "timeRange",
+                      "isOptional": true
+                    }
+                  ],
+                  "type": "Extension/HubsExtension/PartType/MonitorChartPart",
+                  "settings": {
+                    "content": {
+                      "options": {
+                        "charts": [
+                          {
+                            "metrics": [
+                              {
+                                "name": "customMetrics/mendix_runtime_memory_max_heap",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              },
+                              {
+                                "name": "customMetrics/mendix_runtime_memory_committed_heap",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              },
+                              {
+                                "name": "customMetrics/mendix_runtime_memory_used_heap",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              }
+                            ],
+                            "title": "Heap Memory",
+                            "visualization": {
+                              "chartType": 2,
+                              "legend": {
+                                "isVisible": true,
+                                "position": 2,
+                                "hideSubtitle": false
+                              },
+                              "axis": {
+                                "x": {
+                                  "isVisible": true,
+                                  "axisType": 2,
+                                  "min": 1545234492070,
+                                  "max": 1545320892070
+                                },
+                                "y": {
+                                  "isVisible": true,
+                                  "axisType": 1
+                                }
+                              },
+                              "timeBrushEnable": false
+                            },
+                            "itemDataModel": {
+                              "id": "55CB2FC4-12BA-4DEC-AF64-36C5B8C02A0F",
+                              "chartHeight": 1,
+                              "metrics": [
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/mendix_runtime_memory_max_heap",
+                                      "displayName": "mendix_runtime_memory_max_heap"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#47BDF5"
+                                },
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/mendix_runtime_memory_committed_heap",
+                                      "displayName": "mendix_runtime_memory_committed_heap"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#7E58FF"
+                                },
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/mendix_runtime_memory_used_heap",
+                                      "displayName": "mendix_runtime_memory_used_heap"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#44F1C8"
+                                }
+                              ],
+                              "priorPeriod": false,
+                              "horizontalBars": true,
+                              "showOther": false,
+                              "aggregation": 1,
+                              "palette": "multiColor",
+                              "jsonDefinitionId": "2A525883-AAD2-4E2E-B023-646A449460F2",
+                              "version": {
+                                "major": 1,
+                                "minor": 0,
+                                "build": 0
+                              },
+                              "filters": {
+                                "filterType": 0,
+                                "id": "69F3C8F5-A5E8-4C20-AC6B-A06BEE1F5A96",
+                                "OperandFilters": [],
+                                "LogicalOperator": 0
+                              },
+                              "yAxisOptions": {
+                                "options": 1
+                              },
+                              "title": "Heap Memory",
+                              "titleKind": "Custom",
+                              "visualization": {
+                                "chartType": 2,
+                                "legend": {
+                                  "isVisible": true,
+                                  "position": 2,
+                                  "hideSubtitle": false
+                                },
+                                "axis": {
+                                  "x": {
+                                    "isVisible": true,
+                                    "axisType": 2,
+                                    "min": 1545234492070,
+                                    "max": 1545320892070
+                                  },
+                                  "y": {
+                                    "isVisible": true,
+                                    "axisType": 1
+                                  }
+                                },
+                                "timeBrushEnable": false
+                              }
+                            },
+                            "disablePinning": true
+                          }
+                        ],
+                        "v2charts": true,
+                        "version": 1
+                      },
+                      "sharedTimeRange": {
+                        "relative": {
+                          "duration": 24,
+                          "timeUnit": 1
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "3": {
+                "position": {
+                  "x": 0,
+                  "y": 12,
+                  "colSpan": 15,
+                  "rowSpan": 4
+                },
+                "metadata": {
+                  "inputs": [
+                    {
+                      "name": "options",
+                      "value": {
+                        "charts": [
+                          {
+                            "metrics": [
+                              {
+                                "name": "customMetrics/mendix_runtime_memory_max_nonheap",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              },
+                              {
+                                "name": "customMetrics/mendix_runtime_memory_committed_nonheap",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              },
+                              {
+                                "name": "customMetrics/mendix_runtime_memory_used_nonheap",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              }
+                            ],
+                            "title": "Non-heap Memory",
+                            "visualization": {
+                              "chartType": 2,
+                              "legend": {
+                                "isVisible": true,
+                                "position": 2,
+                                "hideSubtitle": false
+                              },
+                              "axis": {
+                                "x": {
+                                  "isVisible": true,
+                                  "axisType": 2,
+                                  "min": 1545234592935,
+                                  "max": 1545320992935
+                                },
+                                "y": {
+                                  "isVisible": true,
+                                  "axisType": 1
+                                }
+                              },
+                              "timeBrushEnable": false
+                            },
+                            "itemDataModel": {
+                              "id": "55CB2FC4-12BA-4DEC-AF64-36C5B8C02A0F",
+                              "chartHeight": 1,
+                              "metrics": [
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/mendix_runtime_memory_max_nonheap",
+                                      "displayName": "mendix_runtime_memory_max_nonheap"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#EB9371"
+                                },
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/mendix_runtime_memory_committed_nonheap",
+                                      "displayName": "mendix_runtime_memory_committed_nonheap"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#0672F1"
+                                },
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/mendix_runtime_memory_used_nonheap",
+                                      "displayName": "mendix_runtime_memory_used_nonheap"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#A3A6BA"
+                                }
+                              ],
+                              "priorPeriod": false,
+                              "horizontalBars": true,
+                              "showOther": false,
+                              "aggregation": 1,
+                              "palette": "multiColor",
+                              "jsonDefinitionId": "2A525883-AAD2-4E2E-B023-646A449460F2",
+                              "version": {
+                                "major": 1,
+                                "minor": 0,
+                                "build": 0
+                              },
+                              "filters": {
+                                "filterType": 0,
+                                "id": "69F3C8F5-A5E8-4C20-AC6B-A06BEE1F5A96",
+                                "OperandFilters": [],
+                                "LogicalOperator": 0
+                              },
+                              "yAxisOptions": {
+                                "options": 1
+                              },
+                              "title": "Non-heap Memory",
+                              "titleKind": "Custom",
+                              "visualization": {
+                                "chartType": 2,
+                                "legend": {
+                                  "isVisible": true,
+                                  "position": 2,
+                                  "hideSubtitle": false
+                                },
+                                "axis": {
+                                  "x": {
+                                    "isVisible": true,
+                                    "axisType": 2,
+                                    "min": 1545234592935,
+                                    "max": 1545320992935
+                                  },
+                                  "y": {
+                                    "isVisible": true,
+                                    "axisType": 1
+                                  }
+                                },
+                                "timeBrushEnable": false
+                              }
+                            }
+                          }
+                        ],
+                        "v2charts": true,
+                        "version": 1
+                      }
+                    },
+                    {
+                      "name": "sharedTimeRange",
+                      "binding": "timeRange",
+                      "isOptional": true
+                    }
+                  ],
+                  "type": "Extension/HubsExtension/PartType/MonitorChartPart",
+                  "settings": {
+                    "content": {
+                      "options": {
+                        "charts": [
+                          {
+                            "metrics": [
+                              {
+                                "name": "customMetrics/mendix_runtime_memory_max_nonheap",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              },
+                              {
+                                "name": "customMetrics/mendix_runtime_memory_committed_nonheap",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              },
+                              {
+                                "name": "customMetrics/mendix_runtime_memory_used_nonheap",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              }
+                            ],
+                            "title": "Non-heap Memory",
+                            "visualization": {
+                              "chartType": 2,
+                              "legend": {
+                                "isVisible": true,
+                                "position": 2,
+                                "hideSubtitle": false
+                              },
+                              "axis": {
+                                "x": {
+                                  "isVisible": true,
+                                  "axisType": 2,
+                                  "min": 1545234592935,
+                                  "max": 1545320992935
+                                },
+                                "y": {
+                                  "isVisible": true,
+                                  "axisType": 1
+                                }
+                              },
+                              "timeBrushEnable": false
+                            },
+                            "itemDataModel": {
+                              "id": "55CB2FC4-12BA-4DEC-AF64-36C5B8C02A0F",
+                              "chartHeight": 1,
+                              "metrics": [
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/mendix_runtime_memory_max_nonheap",
+                                      "displayName": "mendix_runtime_memory_max_nonheap"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#EB9371"
+                                },
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/mendix_runtime_memory_committed_nonheap",
+                                      "displayName": "mendix_runtime_memory_committed_nonheap"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#0672F1"
+                                },
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/mendix_runtime_memory_used_nonheap",
+                                      "displayName": "mendix_runtime_memory_used_nonheap"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#A3A6BA"
+                                }
+                              ],
+                              "priorPeriod": false,
+                              "horizontalBars": true,
+                              "showOther": false,
+                              "aggregation": 1,
+                              "palette": "multiColor",
+                              "jsonDefinitionId": "2A525883-AAD2-4E2E-B023-646A449460F2",
+                              "version": {
+                                "major": 1,
+                                "minor": 0,
+                                "build": 0
+                              },
+                              "filters": {
+                                "filterType": 0,
+                                "id": "69F3C8F5-A5E8-4C20-AC6B-A06BEE1F5A96",
+                                "OperandFilters": [],
+                                "LogicalOperator": 0
+                              },
+                              "yAxisOptions": {
+                                "options": 1
+                              },
+                              "title": "Non-heap Memory",
+                              "titleKind": "Custom",
+                              "visualization": {
+                                "chartType": 2,
+                                "legend": {
+                                  "isVisible": true,
+                                  "position": 2,
+                                  "hideSubtitle": false
+                                },
+                                "axis": {
+                                  "x": {
+                                    "isVisible": true,
+                                    "axisType": 2,
+                                    "min": 1545234592935,
+                                    "max": 1545320992935
+                                  },
+                                  "y": {
+                                    "isVisible": true,
+                                    "axisType": 1
+                                  }
+                                },
+                                "timeBrushEnable": false
+                              }
+                            },
+                            "disablePinning": true
+                          }
+                        ],
+                        "v2charts": true,
+                        "version": 1
+                      },
+                      "sharedTimeRange": {
+                        "relative": {
+                          "duration": 24,
+                          "timeUnit": 1
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "4": {
+                "position": {
+                  "x": 0,
+                  "y": 16,
+                  "colSpan": 15,
+                  "rowSpan": 4
+                },
+                "metadata": {
+                  "inputs": [
+                    {
+                      "name": "options",
+                      "value": {
+                        "charts": [
+                          {
+                            "metrics": [
+                              {
+                                "name": "customMetrics/mendix_runtime_threads_threads",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              }
+                            ],
+                            "title": "Threads",
+                            "visualization": {
+                              "chartType": 2,
+                              "legend": {
+                                "isVisible": true,
+                                "position": 2,
+                                "hideSubtitle": false
+                              },
+                              "axis": {
+                                "x": {
+                                  "isVisible": true,
+                                  "axisType": 2,
+                                  "min": 1545234592935,
+                                  "max": 1545320992935
+                                },
+                                "y": {
+                                  "isVisible": true,
+                                  "axisType": 1
+                                }
+                              },
+                              "timeBrushEnable": false
+                            },
+                            "itemDataModel": {
+                              "id": "55CB2FC4-12BA-4DEC-AF64-36C5B8C02A0F",
+                              "chartHeight": 1,
+                              "metrics": [
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/mendix_runtime_threads_threads",
+                                      "displayName": "mendix_runtime_threads_threads"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#B456DB"
+                                }
+                              ],
+                              "priorPeriod": false,
+                              "horizontalBars": true,
+                              "showOther": false,
+                              "aggregation": 1,
+                              "palette": "multiColor",
+                              "jsonDefinitionId": "2A525883-AAD2-4E2E-B023-646A449460F2",
+                              "version": {
+                                "major": 1,
+                                "minor": 0,
+                                "build": 0
+                              },
+                              "filters": {
+                                "filterType": 0,
+                                "id": "69F3C8F5-A5E8-4C20-AC6B-A06BEE1F5A96",
+                                "OperandFilters": [],
+                                "LogicalOperator": 0
+                              },
+                              "yAxisOptions": {
+                                "options": 1
+                              },
+                              "title": "Threads",
+                              "titleKind": "Custom",
+                              "visualization": {
+                                "chartType": 2,
+                                "legend": {
+                                  "isVisible": true,
+                                  "position": 2,
+                                  "hideSubtitle": false
+                                },
+                                "axis": {
+                                  "x": {
+                                    "isVisible": true,
+                                    "axisType": 2,
+                                    "min": 1545234592935,
+                                    "max": 1545320992935
+                                  },
+                                  "y": {
+                                    "isVisible": true,
+                                    "axisType": 1
+                                  }
+                                },
+                                "timeBrushEnable": false
+                              }
+                            }
+                          }
+                        ],
+                        "v2charts": true,
+                        "version": 1
+                      }
+                    },
+                    {
+                      "name": "sharedTimeRange",
+                      "binding": "timeRange",
+                      "isOptional": true
+                    }
+                  ],
+                  "type": "Extension/HubsExtension/PartType/MonitorChartPart",
+                  "settings": {
+                    "content": {
+                      "options": {
+                        "charts": [
+                          {
+                            "metrics": [
+                              {
+                                "name": "customMetrics/mendix_runtime_threads_threads",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              }
+                            ],
+                            "title": "Threads",
+                            "visualization": {
+                              "chartType": 2,
+                              "legend": {
+                                "isVisible": true,
+                                "position": 2,
+                                "hideSubtitle": false
+                              },
+                              "axis": {
+                                "x": {
+                                  "isVisible": true,
+                                  "axisType": 2,
+                                  "min": 1545234592935,
+                                  "max": 1545320992935
+                                },
+                                "y": {
+                                  "isVisible": true,
+                                  "axisType": 1
+                                }
+                              },
+                              "timeBrushEnable": false
+                            },
+                            "itemDataModel": {
+                              "id": "55CB2FC4-12BA-4DEC-AF64-36C5B8C02A0F",
+                              "chartHeight": 1,
+                              "metrics": [
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/mendix_runtime_threads_threads",
+                                      "displayName": "mendix_runtime_threads_threads"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#B456DB"
+                                }
+                              ],
+                              "priorPeriod": false,
+                              "horizontalBars": true,
+                              "showOther": false,
+                              "aggregation": 1,
+                              "palette": "multiColor",
+                              "jsonDefinitionId": "2A525883-AAD2-4E2E-B023-646A449460F2",
+                              "version": {
+                                "major": 1,
+                                "minor": 0,
+                                "build": 0
+                              },
+                              "filters": {
+                                "filterType": 0,
+                                "id": "69F3C8F5-A5E8-4C20-AC6B-A06BEE1F5A96",
+                                "OperandFilters": [],
+                                "LogicalOperator": 0
+                              },
+                              "yAxisOptions": {
+                                "options": 1
+                              },
+                              "title": "Threads",
+                              "titleKind": "Custom",
+                              "visualization": {
+                                "chartType": 2,
+                                "legend": {
+                                  "isVisible": true,
+                                  "position": 2,
+                                  "hideSubtitle": false
+                                },
+                                "axis": {
+                                  "x": {
+                                    "isVisible": true,
+                                    "axisType": 2,
+                                    "min": 1545234592935,
+                                    "max": 1545320992935
+                                  },
+                                  "y": {
+                                    "isVisible": true,
+                                    "axisType": 1
+                                  }
+                                },
+                                "timeBrushEnable": false
+                              }
+                            },
+                            "disablePinning": true
+                          }
+                        ],
+                        "v2charts": true,
+                        "version": 1
+                      },
+                      "sharedTimeRange": {
+                        "relative": {
+                          "duration": 24,
+                          "timeUnit": 1
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "5": {
+                "position": {
+                  "x": 0,
+                  "y": 20,
+                  "colSpan": 15,
+                  "rowSpan": 4
+                },
+                "metadata": {
+                  "inputs": [
+                    {
+                      "name": "options",
+                      "value": {
+                        "charts": [
+                          {
+                            "metrics": [
+                              {
+                                "name": "customMetrics/mendix_runtime_connectionbus_insert",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              },
+                              {
+                                "name": "customMetrics/mendix_runtime_connectionbus_select",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              },
+                              {
+                                "name": "customMetrics/mendix_runtime_connectionbus_update",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              },
+                              {
+                                "name": "customMetrics/mendix_runtime_connectionbus_delete",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              },
+                              {
+                                "name": "customMetrics/mendix_runtime_connectionbus_transaction",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              }
+                            ],
+                            "title": "Database Queries",
+                            "visualization": {
+                              "chartType": 2,
+                              "legend": {
+                                "isVisible": true,
+                                "position": 2,
+                                "hideSubtitle": false
+                              },
+                              "axis": {
+                                "x": {
+                                  "isVisible": true,
+                                  "axisType": 2,
+                                  "min": 1545234592935,
+                                  "max": 1545320992935
+                                },
+                                "y": {
+                                  "isVisible": true,
+                                  "axisType": 1
+                                }
+                              },
+                              "timeBrushEnable": false
+                            },
+                            "itemDataModel": {
+                              "id": "55CB2FC4-12BA-4DEC-AF64-36C5B8C02A0F",
+                              "chartHeight": 1,
+                              "metrics": [
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/mendix_runtime_connectionbus_insert",
+                                      "displayName": "mendix_runtime_connectionbus_insert"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#63899D"
+                                },
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/mendix_runtime_connectionbus_select",
+                                      "displayName": "mendix_runtime_connectionbus_select"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#81A0FC"
+                                },
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/mendix_runtime_connectionbus_update",
+                                      "displayName": "mendix_runtime_connectionbus_update"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#F1C721"
+                                },
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/mendix_runtime_connectionbus_delete",
+                                      "displayName": "mendix_runtime_connectionbus_delete"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#47BDF5"
+                                },
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/mendix_runtime_connectionbus_transaction",
+                                      "displayName": "mendix_runtime_connectionbus_transaction"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#7E58FF"
+                                }
+                              ],
+                              "priorPeriod": false,
+                              "horizontalBars": true,
+                              "showOther": false,
+                              "aggregation": 1,
+                              "palette": "multiColor",
+                              "jsonDefinitionId": "2A525883-AAD2-4E2E-B023-646A449460F2",
+                              "version": {
+                                "major": 1,
+                                "minor": 0,
+                                "build": 0
+                              },
+                              "filters": {
+                                "filterType": 0,
+                                "id": "69F3C8F5-A5E8-4C20-AC6B-A06BEE1F5A96",
+                                "OperandFilters": [],
+                                "LogicalOperator": 0
+                              },
+                              "yAxisOptions": {
+                                "options": 1
+                              },
+                              "title": "Database Queries",
+                              "titleKind": "Custom",
+                              "visualization": {
+                                "chartType": 2,
+                                "legend": {
+                                  "isVisible": true,
+                                  "position": 2,
+                                  "hideSubtitle": false
+                                },
+                                "axis": {
+                                  "x": {
+                                    "isVisible": true,
+                                    "axisType": 2,
+                                    "min": 1545234592935,
+                                    "max": 1545320992935
+                                  },
+                                  "y": {
+                                    "isVisible": true,
+                                    "axisType": 1
+                                  }
+                                },
+                                "timeBrushEnable": false
+                              }
+                            }
+                          }
+                        ],
+                        "v2charts": true,
+                        "version": 1
+                      }
+                    },
+                    {
+                      "name": "sharedTimeRange",
+                      "binding": "timeRange",
+                      "isOptional": true
+                    }
+                  ],
+                  "type": "Extension/HubsExtension/PartType/MonitorChartPart",
+                  "settings": {
+                    "content": {
+                      "options": {
+                        "charts": [
+                          {
+                            "metrics": [
+                              {
+                                "name": "customMetrics/mendix_runtime_connectionbus_insert",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              },
+                              {
+                                "name": "customMetrics/mendix_runtime_connectionbus_select",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              },
+                              {
+                                "name": "customMetrics/mendix_runtime_connectionbus_update",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              },
+                              {
+                                "name": "customMetrics/mendix_runtime_connectionbus_delete",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              },
+                              {
+                                "name": "customMetrics/mendix_runtime_connectionbus_transaction",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              }
+                            ],
+                            "title": "Database Queries",
+                            "visualization": {
+                              "chartType": 2,
+                              "legend": {
+                                "isVisible": true,
+                                "position": 2,
+                                "hideSubtitle": false
+                              },
+                              "axis": {
+                                "x": {
+                                  "isVisible": true,
+                                  "axisType": 2,
+                                  "min": 1545234592935,
+                                  "max": 1545320992935
+                                },
+                                "y": {
+                                  "isVisible": true,
+                                  "axisType": 1
+                                }
+                              },
+                              "timeBrushEnable": false
+                            },
+                            "itemDataModel": {
+                              "id": "55CB2FC4-12BA-4DEC-AF64-36C5B8C02A0F",
+                              "chartHeight": 1,
+                              "metrics": [
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/mendix_runtime_connectionbus_insert",
+                                      "displayName": "mendix_runtime_connectionbus_insert"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#63899D"
+                                },
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/mendix_runtime_connectionbus_select",
+                                      "displayName": "mendix_runtime_connectionbus_select"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#81A0FC"
+                                },
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/mendix_runtime_connectionbus_update",
+                                      "displayName": "mendix_runtime_connectionbus_update"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#F1C721"
+                                },
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/mendix_runtime_connectionbus_delete",
+                                      "displayName": "mendix_runtime_connectionbus_delete"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#47BDF5"
+                                },
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/mendix_runtime_connectionbus_transaction",
+                                      "displayName": "mendix_runtime_connectionbus_transaction"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#7E58FF"
+                                }
+                              ],
+                              "priorPeriod": false,
+                              "horizontalBars": true,
+                              "showOther": false,
+                              "aggregation": 1,
+                              "palette": "multiColor",
+                              "jsonDefinitionId": "2A525883-AAD2-4E2E-B023-646A449460F2",
+                              "version": {
+                                "major": 1,
+                                "minor": 0,
+                                "build": 0
+                              },
+                              "filters": {
+                                "filterType": 0,
+                                "id": "69F3C8F5-A5E8-4C20-AC6B-A06BEE1F5A96",
+                                "OperandFilters": [],
+                                "LogicalOperator": 0
+                              },
+                              "yAxisOptions": {
+                                "options": 1
+                              },
+                              "title": "Database Queries",
+                              "titleKind": "Custom",
+                              "visualization": {
+                                "chartType": 2,
+                                "legend": {
+                                  "isVisible": true,
+                                  "position": 2,
+                                  "hideSubtitle": false
+                                },
+                                "axis": {
+                                  "x": {
+                                    "isVisible": true,
+                                    "axisType": 2,
+                                    "min": 1545234592935,
+                                    "max": 1545320992935
+                                  },
+                                  "y": {
+                                    "isVisible": true,
+                                    "axisType": 1
+                                  }
+                                },
+                                "timeBrushEnable": false
+                              }
+                            },
+                            "disablePinning": true
+                          }
+                        ],
+                        "v2charts": true,
+                        "version": 1
+                      },
+                      "sharedTimeRange": {
+                        "relative": {
+                          "duration": 24,
+                          "timeUnit": 1
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "6": {
+                "position": {
+                  "x": 0,
+                  "y": 24,
+                  "colSpan": 15,
+                  "rowSpan": 4
+                },
+                "metadata": {
+                  "inputs": [
+                    {
+                      "name": "options",
+                      "value": {
+                        "charts": [
+                          {
+                            "metrics": [
+                              {
+                                "name": "customMetrics/cpu_usage_guest",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              },
+                              {
+                                "name": "customMetrics/cpu_usage_guest_nice",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              },
+                              {
+                                "name": "customMetrics/cpu_usage_idle",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              },
+                              {
+                                "name": "customMetrics/cpu_usage_iowait",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              },
+                              {
+                                "name": "customMetrics/cpu_usage_irq",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              },
+                              {
+                                "name": "customMetrics/cpu_usage_nice",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              },
+                              {
+                                "name": "customMetrics/cpu_usage_softirq",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              },
+                              {
+                                "name": "customMetrics/cpu_usage_steal",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              },
+                              {
+                                "name": "customMetrics/cpu_usage_system",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              },
+                              {
+                                "name": "customMetrics/cpu_usage_user",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              }
+                            ],
+                            "title": "CPU",
+                            "visualization": {
+                              "chartType": 2,
+                              "legend": {
+                                "isVisible": true,
+                                "position": 2,
+                                "hideSubtitle": false
+                              },
+                              "axis": {
+                                "x": {
+                                  "isVisible": true,
+                                  "axisType": 2,
+                                  "min": 1545234592935,
+                                  "max": 1545320992935
+                                },
+                                "y": {
+                                  "isVisible": true,
+                                  "axisType": 1
+                                }
+                              },
+                              "timeBrushEnable": false
+                            },
+                            "itemDataModel": {
+                              "id": "55CB2FC4-12BA-4DEC-AF64-36C5B8C02A0F",
+                              "chartHeight": 1,
+                              "metrics": [
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/cpu_usage_guest",
+                                      "displayName": "cpu_usage_guest"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#44F1C8"
+                                },
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/cpu_usage_guest_nice",
+                                      "displayName": "cpu_usage_guest_nice"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#EB9371"
+                                },
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/cpu_usage_idle",
+                                      "displayName": "cpu_usage_idle"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#0672F1"
+                                },
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/cpu_usage_iowait",
+                                      "displayName": "cpu_usage_iowait"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#A3A6BA"
+                                },
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/cpu_usage_irq",
+                                      "displayName": "cpu_usage_irq"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#B456DB"
+                                },
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/cpu_usage_nice",
+                                      "displayName": "cpu_usage_nice"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#63899D"
+                                },
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/cpu_usage_softirq",
+                                      "displayName": "cpu_usage_softirq"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#81A0FC"
+                                },
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/cpu_usage_steal",
+                                      "displayName": "cpu_usage_steal"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#F1C721"
+                                },
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/cpu_usage_system",
+                                      "displayName": "cpu_usage_system"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#47BDF5"
+                                },
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/cpu_usage_user",
+                                      "displayName": "cpu_usage_user"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#7E58FF"
+                                }
+                              ],
+                              "priorPeriod": false,
+                              "horizontalBars": true,
+                              "showOther": false,
+                              "aggregation": 1,
+                              "palette": "multiColor",
+                              "jsonDefinitionId": "2A525883-AAD2-4E2E-B023-646A449460F2",
+                              "version": {
+                                "major": 1,
+                                "minor": 0,
+                                "build": 0
+                              },
+                              "filters": {
+                                "filterType": 0,
+                                "id": "69F3C8F5-A5E8-4C20-AC6B-A06BEE1F5A96",
+                                "OperandFilters": [],
+                                "LogicalOperator": 0
+                              },
+                              "yAxisOptions": {
+                                "options": 1
+                              },
+                              "title": "CPU",
+                              "titleKind": "Custom",
+                              "visualization": {
+                                "chartType": 2,
+                                "legend": {
+                                  "isVisible": true,
+                                  "position": 2,
+                                  "hideSubtitle": false
+                                },
+                                "axis": {
+                                  "x": {
+                                    "isVisible": true,
+                                    "axisType": 2,
+                                    "min": 1545234592935,
+                                    "max": 1545320992935
+                                  },
+                                  "y": {
+                                    "isVisible": true,
+                                    "axisType": 1
+                                  }
+                                },
+                                "timeBrushEnable": false
+                              }
+                            }
+                          }
+                        ],
+                        "v2charts": true,
+                        "version": 1
+                      }
+                    },
+                    {
+                      "name": "sharedTimeRange",
+                      "binding": "timeRange",
+                      "isOptional": true
+                    }
+                  ],
+                  "type": "Extension/HubsExtension/PartType/MonitorChartPart",
+                  "settings": {
+                    "content": {
+                      "options": {
+                        "charts": [
+                          {
+                            "metrics": [
+                              {
+                                "name": "customMetrics/cpu_usage_guest",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              },
+                              {
+                                "name": "customMetrics/cpu_usage_guest_nice",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              },
+                              {
+                                "name": "customMetrics/cpu_usage_idle",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              },
+                              {
+                                "name": "customMetrics/cpu_usage_iowait",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              },
+                              {
+                                "name": "customMetrics/cpu_usage_irq",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              },
+                              {
+                                "name": "customMetrics/cpu_usage_nice",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              },
+                              {
+                                "name": "customMetrics/cpu_usage_softirq",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              },
+                              {
+                                "name": "customMetrics/cpu_usage_steal",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              },
+                              {
+                                "name": "customMetrics/cpu_usage_system",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              },
+                              {
+                                "name": "customMetrics/cpu_usage_user",
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                },
+                                "aggregationType": 1
+                              }
+                            ],
+                            "title": "CPU",
+                            "visualization": {
+                              "chartType": 2,
+                              "legend": {
+                                "isVisible": true,
+                                "position": 2,
+                                "hideSubtitle": false
+                              },
+                              "axis": {
+                                "x": {
+                                  "isVisible": true,
+                                  "axisType": 2,
+                                  "min": 1545234592935,
+                                  "max": 1545320992935
+                                },
+                                "y": {
+                                  "isVisible": true,
+                                  "axisType": 1
+                                }
+                              },
+                              "timeBrushEnable": false
+                            },
+                            "itemDataModel": {
+                              "id": "55CB2FC4-12BA-4DEC-AF64-36C5B8C02A0F",
+                              "chartHeight": 1,
+                              "metrics": [
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/cpu_usage_guest",
+                                      "displayName": "cpu_usage_guest"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#44F1C8"
+                                },
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/cpu_usage_guest_nice",
+                                      "displayName": "cpu_usage_guest_nice"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#EB9371"
+                                },
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/cpu_usage_idle",
+                                      "displayName": "cpu_usage_idle"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#0672F1"
+                                },
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/cpu_usage_iowait",
+                                      "displayName": "cpu_usage_iowait"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#A3A6BA"
+                                },
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/cpu_usage_irq",
+                                      "displayName": "cpu_usage_irq"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#B456DB"
+                                },
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/cpu_usage_nice",
+                                      "displayName": "cpu_usage_nice"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#63899D"
+                                },
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/cpu_usage_softirq",
+                                      "displayName": "cpu_usage_softirq"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#81A0FC"
+                                },
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/cpu_usage_steal",
+                                      "displayName": "cpu_usage_steal"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#F1C721"
+                                },
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/cpu_usage_system",
+                                      "displayName": "cpu_usage_system"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#47BDF5"
+                                },
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('ai_resourceGroup'), 'microsoft.insights/components', parameters('ai_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "customMetrics/cpu_usage_user",
+                                      "displayName": "cpu_usage_user"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.insights/components/kusto"
+                                    }
+                                  },
+                                  "metricAggregation": 4,
+                                  "color": "#7E58FF"
+                                }
+                              ],
+                              "priorPeriod": false,
+                              "horizontalBars": true,
+                              "showOther": false,
+                              "aggregation": 1,
+                              "palette": "multiColor",
+                              "jsonDefinitionId": "2A525883-AAD2-4E2E-B023-646A449460F2",
+                              "version": {
+                                "major": 1,
+                                "minor": 0,
+                                "build": 0
+                              },
+                              "filters": {
+                                "filterType": 0,
+                                "id": "69F3C8F5-A5E8-4C20-AC6B-A06BEE1F5A96",
+                                "OperandFilters": [],
+                                "LogicalOperator": 0
+                              },
+                              "yAxisOptions": {
+                                "options": 1
+                              },
+                              "title": "CPU",
+                              "titleKind": "Custom",
+                              "visualization": {
+                                "chartType": 2,
+                                "legend": {
+                                  "isVisible": true,
+                                  "position": 2,
+                                  "hideSubtitle": false
+                                },
+                                "axis": {
+                                  "x": {
+                                    "isVisible": true,
+                                    "axisType": 2,
+                                    "min": 1545234592935,
+                                    "max": 1545320992935
+                                  },
+                                  "y": {
+                                    "isVisible": true,
+                                    "axisType": 1
+                                  }
+                                },
+                                "timeBrushEnable": false
+                              }
+                            },
+                            "disablePinning": true
+                          }
+                        ],
+                        "v2charts": true,
+                        "version": 1
+                      },
+                      "sharedTimeRange": {
+                        "relative": {
+                          "duration": 24,
+                          "timeUnit": 1
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "7": {
+                "position": {
+                  "x": 0,
+                  "y": 28,
+                  "colSpan": 15,
+                  "rowSpan": 4
+                },
+                "metadata": {
+                  "inputs": [
+                    {
+                      "name": "options",
+                      "value": {
+                        "charts": [
+                          {
+                            "metrics": [
+                              {
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('storage_resourceGroup'), 'microsoft.storage/storageAccounts', parameters('storage_name'))]"
+                                },
+                                "name": "Capacity",
+                                "timeGrainMs": 86400000,
+                                "type": "legacyBlob"
+                              }
+                            ],
+                            "chartType": 0,
+                            "title": "Capacity",
+                            "subtitle": "inpomedia",
+                            "itemDataModel": {
+                              "id": "defaultAiChartDiva8e8501f-de06-4242-b045-b13d60570acb",
+                              "chartHeight": 1,
+                              "metrics": [
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('storage_resourceGroup'), 'microsoft.storage/storageAccounts', parameters('storage_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "Capacity",
+                                      "displayName": "Capacity"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.storage/storageaccounts/services/blob"
+                                    }
+                                  },
+                                  "metricAggregation": 8,
+                                  "color": "#47BDF5"
+                                }
+                              ],
+                              "priorPeriod": false,
+                              "horizontalBars": true,
+                              "showOther": false,
+                              "palette": "multiColor",
+                              "jsonDefinitionId": "",
+                              "filters": null,
+                              "yAxisOptions": {
+                                "options": 1
+                              },
+                              "title": "Capacity",
+                              "titleKind": "Auto",
+                              "visualization": {
+                                "containerSize": {
+                                  "height": 291,
+                                  "width": 505
+                                },
+                                "chartType": 2
+                              }
+                            }
+                          }
+                        ],
+                        "v2charts": true,
+                        "version": 1
+                      },
+                      "isOptional": true
+                    },
+                    {
+                      "name": "sharedTimeRange",
+                      "isOptional": true
+                    }
+                  ],
+                  "type": "Extension/HubsExtension/PartType/MonitorChartPart",
+                  "settings": {
+                    "content": {
+                      "options": {
+                        "charts": [
+                          {
+                            "metrics": [
+                              {
+                                "resourceMetadata": {
+                                  "resourceId": "[resourceId(parameters('storage_resourceGroup'), 'microsoft.storage/storageAccounts', parameters('storage_name'))]"
+                                },
+                                "name": "Capacity",
+                                "timeGrainMs": 86400000,
+                                "type": "legacyBlob"
+                              }
+                            ],
+                            "chartType": 0,
+                            "title": "Capacity",
+                            "subtitle": "inpomedia",
+                            "itemDataModel": {
+                              "id": "defaultAiChartDiva8e8501f-de06-4242-b045-b13d60570acb",
+                              "chartHeight": 1,
+                              "metrics": [
+                                {
+                                  "id": {
+                                    "resourceDefinition": {
+                                      "id": "[resourceId(parameters('storage_resourceGroup'), 'microsoft.storage/storageAccounts', parameters('storage_name'))]"
+                                    },
+                                    "name": {
+                                      "id": "Capacity",
+                                      "displayName": "Capacity"
+                                    },
+                                    "namespace": {
+                                      "name": "microsoft.storage/storageaccounts/services/blob"
+                                    }
+                                  },
+                                  "metricAggregation": 8,
+                                  "color": "#47BDF5"
+                                }
+                              ],
+                              "priorPeriod": false,
+                              "horizontalBars": true,
+                              "showOther": false,
+                              "palette": "multiColor",
+                              "jsonDefinitionId": "",
+                              "filters": null,
+                              "yAxisOptions": {
+                                "options": 1
+                              },
+                              "title": "Capacity",
+                              "titleKind": "Auto",
+                              "visualization": {
+                                "containerSize": {
+                                  "height": 291,
+                                  "width": 505
+                                },
+                                "chartType": 2
+                              }
+                            },
+                            "disablePinning": true
+                          }
+                        ],
+                        "v2charts": true,
+                        "version": 1
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "name": "[parameters('dashboardName')]",
+      "type": "Microsoft.Portal/dashboards",
+      "location": "westeurope",
+      "tags": {
+        "hidden-title": "[parameters('dashboardName')]"
+      },
+      "apiVersion": "2015-08-01-preview"
+    }
+  ]
+}
